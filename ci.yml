@@ -1,0 +1,15 @@
+Global:
+    tool : build_submitter
+Default:
+    profile : [dev]
+Profiles:
+    - profile:
+      name : dev
+      env : cmc_standard
+      command : echo 'Nothing to do'
+      release : false
+    - profile:
+      name : opera
+      env : cmc_standard
+      command: rm -rf output && mkdir -p output/webroot && cp -r -t output/webroot css js less logo indexbak.html uf.config.js
+      release : true
